@@ -1,0 +1,39 @@
+
+
+@media only screen and (max-width: 260px){
+    div, div *, header, header *{
+        display: none;
+    }    
+
+    .tiny-screen{
+        display: block !important;
+        height: 100%;
+        width: 100%;
+    }
+    .tiny-screen p{
+        display: block !important;
+
+        padding: 6px;
+    }
+
+    .tiny-screen p.question-mark{
+        margin: auto;
+        font-size: 120px;
+        text-align: center;
+    }
+    
+
+}
+
+
+@media only screen and (max-width: 350px){
+
+    div.blurb{
+        min-width: 0px;
+        width: auto;
+    }
+    div.icons{
+        display: none;
+    }
+}
+

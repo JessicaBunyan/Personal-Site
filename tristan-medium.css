@@ -1,0 +1,44 @@
+@media only screen and (min-width: 600px ){
+
+
+    body{
+        background: #dedfe4;
+        overflow-y: auto;
+    }
+    .central-column{
+        min-width: 600px;
+        width: 80%;
+        margin-top: 0px;
+        min-height: 85%;
+        height: calc(100% - 20vw );
+        overflow-y: visible;
+
+    }
+
+    header{
+        position: relative;
+    }
+    .header-filler{
+        display: none;
+    }
+    .blurb{
+        width: 80%;
+    }
+    .tile{
+        border-left-width: 40px;
+    }
+
+
+    a.tile-link{
+        font-size: 24px;
+    }
+
+    h2{
+        font-size: 22px;
+    }
+    h4.subtitle{
+        display: block;
+        margin-top: 4px;
+    }
+
+}
