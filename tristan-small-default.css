@@ -45,7 +45,9 @@ h4.subtitle{
     display: none;
 }
 
-.icons{
+
+
+.icons-left{
     position: absolute;
     bottom: 6px;
     right: 6px;
@@ -72,6 +74,23 @@ img.icon.wide{
     overflow-y: auto;
 }
 
+#github-right{
+    display: none;
+}
+
+.header-content-right{
+    display: none;
+}
+
+.header-content-left{
+    width: 100%;
+}
+
+/* .header-buffer{
+    width: auto;
+    height: 100%;;
+    display: inline-block;
+} */
 
 header{
     max-height: 200px;
@@ -89,9 +108,12 @@ header{
 
 .header-content{
     width: 95vw;
+    max-height: 200px;
+
     margin: 0 auto;
     position: relative;
 }
+
 
 .header-filler{
     max-height: 200px;

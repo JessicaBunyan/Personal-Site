@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1024px){
+@media only screen and (min-width: 1128px){
 
 
     h1{
@@ -18,4 +18,51 @@
     .blurb{
         width: calc(100% - 200px);
     }
+
+    #github-left{
+        display: none;
+    }
+
+    #github-right{
+        display: block;
+    }
+
+    .icons-left{
+        position: absolute;
+        bottom: 25px;
+        right: 76px;
+        background: #eee;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        height: 40px;
+        min-width: 130px;
+    }
+
+    .icons-right{
+        background: #eee;
+        width: 100px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        /* position: absolute; */
+        /* left: 0px; */
+        /* bottom: 6px; */
+        margin-left: 23px;
+    
+    }
+
+    .header-content-left{
+        width: calc(100% - 115px);
+        height: 100%;
+        display: inline-block;
+        padding: 0px;
+        margin: 0px;
+    }
+    .header-content-right{
+        padding: 0px;
+        margin: 0px;
+        width: 100px;
+        height: 100%;
+        display: inline-block;
+    }
+    
 }
