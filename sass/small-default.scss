@@ -1,4 +1,4 @@
-$green: #c1d82f;
+@import "variables.scss";
 
 
 // $contentHeight: 200px;
@@ -9,6 +9,14 @@ $green: #c1d82f;
     font-family: 'Open Sans', sans-serif;
 
 }
+
+// avatar height
+
+// width: 35%;
+// min-width: 190px;
+// max-width: 250px;
+
+// $w: min(35vw, 250px);
 
 
 main{
@@ -64,7 +72,7 @@ header{
         display: block;
         margin: 0 auto;
         // height: 35vw;
-        width: 35%;
+        width: 30%;
         min-width: 190px;
         max-width: 250px;
         border-radius: 50%;
@@ -76,7 +84,9 @@ header{
     }
 
 
-
+    .icons{
+        display: none;
+    }
 
 
 

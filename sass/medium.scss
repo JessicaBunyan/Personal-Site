@@ -1,11 +1,28 @@
 
-$avatarHeight: 250px;
 
-$halfAvatarHeight: $avatarHeight/2;
+@import "variables.scss";
+
+
+
+@mixin avatar-position($w){
+
+    left: calc(50vw - (#{$avatarMinHeight / 2}))  ;
+    bottom: -#{$avatarMinHeight / 2};  
+
+    @media only screen and (min-width: 633px){
+        left: 35vw;
+        bottom: -15vw;
+    }
+    @media only screen and (min-width: 833px){
+        left: calc(50% - #{$avatarMaxHeight / 2});
+        bottom: -#{$avatarMaxHeight / 2};    
+    }
+}
+
 
 main{
     grid-template-columns: 50% 50%;
-    grid-template-rows: 55vh 300px 200px 300px 200px 100px;
+    grid-template-rows: 45vh 35vh 20vh 35vh 20vh 10vh;
     height: 1500px;
     width: 100%;
     grid-template-areas: 
@@ -25,8 +42,17 @@ main{
     }
 }
 
-header{
+.test{
+    @include avatar-position(10px);
+    height: 50px;
+    width: 100px;
+    position: absolute;
 
+}
+
+header{
+ 
+    display: block; 
     border-bottom: solid 6px white;
     position: relative;
     background:
@@ -36,9 +62,11 @@ header{
         ),
     url("../img/background.jpg");
 
-background-position: center;
-background-size: cover;
-    
+    background-position: center;
+    background-size: cover;
+    // @include avatar-position(10px);
+  
+   
 
     h1{
 
@@ -54,9 +82,11 @@ background-size: cover;
     }
 
     .avatar{
+        z-index: 10;    
         position: absolute;
-        left: calc(50% - #{$halfAvatarHeight});
-        bottom: -$halfAvatarHeight;
+        @include avatar-position(10px);
+        // left: calc(50% - #{$halfAvatarHeight});
+        // bottom: -$halfAvatarHeight;
     }
 }
 
