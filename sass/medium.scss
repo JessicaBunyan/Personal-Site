@@ -40,6 +40,19 @@ background-position: center;
 background-size: cover;
     
 
+    .icons{
+        position: absolute;
+        left: calc(50vw + #{$avatarHeight / 2});
+        background: $green;
+        height: 40px;
+        width: 200px;
+        bottom: 0px;
+        .icon{
+            width: 40px;
+            height: 40px;
+        }
+    }
+
     h1{
 
         font-size: 46px;
