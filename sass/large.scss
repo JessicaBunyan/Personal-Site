@@ -47,7 +47,7 @@ header{
 .thumbnail-band{
     width: 90%;
     margin: 0 auto;
-    height: 240px;
+    height: 208px;
 
     .thumbnail{
 
@@ -58,7 +58,11 @@ header{
         }
         a{
             
-            width: 320px;
+            width: 280px;
+        }
+
+        .figcaption{
+            font-size: 22px;   
         }
     }
 }

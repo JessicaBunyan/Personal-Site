@@ -6,8 +6,13 @@
 // $headerHeight: $contentHeight * 2;
 
 *{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', helvetica, sans-serif;
     color: #222;
+    letter-spacing: +0.02em;
+}
+
+h1, h2, h3, h4, figcaption{
+    letter-spacing: +0.06em;
 }
 
 
@@ -58,7 +63,7 @@ header{
 
     h1{
         line-height: 1.3em;
-        letter-spacing: -.02em;
+        letter-spacing: +.06em;
         margin: 30px 7%;
         text-align: center;
         font-size: 50px;
