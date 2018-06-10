@@ -1,3 +1,7 @@
+@import "variables.scss";
+
+
+
 main{
     grid-template-columns: 50% 50%;
     grid-template-rows: 55vh 500px 200px 500px 200px 100px;
@@ -8,11 +12,11 @@ main{
     "content1 photo1"
     "filler1 filler1"
     "photo2 content2"
-    "filler2 filler2"
+    "filler2 filler2" 
     "footer footer";
     
-}
-
+} 
+ 
 
 header{
 
