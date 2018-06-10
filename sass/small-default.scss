@@ -9,17 +9,17 @@ $green: #c1d82f;
 main{
     display: grid;
     display: -ms-grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns:100%;
     grid-template-rows: 400px 200px 300px 200px 300px 100px;
     height: 1500px;
     width: 100%;
     grid-template-areas: 
-    "header header"
-    "filler1 filler1"
-    "content1 content1"
-    "filler2 filler2"
-    "content2 content2"
-    "footer footer";
+    "header"
+    "filler1"
+    "content1"
+    "filler2"
+    "content2"
+    "footer";
 
     
     
@@ -28,26 +28,25 @@ main{
 
 
 header{
+    position: relative;
     grid-area: header;
     background: $green;
 
 
     h1{
-        line-height: 58px;
+        line-height: 1.3em;
         letter-spacing: -.02em;
-        margin: 3% 10%;
+        margin: 30px 7%;
         text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 50px;
+        font-weight: 700;
+        color: white;
         strong{
 
             margin: 0 auto;
-            font-family: 'Open Sans', sans-serif;
-            color: white;
-            font-size: 50px;
-            font-weight: 700;
 
-            #hi{
-                display: none;
-            }
+
         }
     }
     
@@ -57,13 +56,15 @@ header{
         margin: 0 auto;
         // height: 35vw;
         width: 35%;
-        min-width: 150px;
+        min-width: 190px;
         max-width: 250px;
         border-radius: 50%;
         border: solid 6px white;
     }
 
-
+    #hi{
+        display: none;
+    }
 
 
 
@@ -105,3 +106,8 @@ footer{
     grid-area: footer;
 }
 
+
+
+.photo{
+    display: none;
+}

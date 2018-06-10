@@ -1,0 +1,51 @@
+
+$avatarHeight: 250px;
+
+$halfAvatarHeight: $avatarHeight/2;
+
+main{
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 250px 300px 200px 300px 200px 100px;
+    height: 1500px;
+    width: 100%;
+    grid-template-areas: 
+    "header header"
+    "content1 photo1"
+    "filler1 filler1"
+    "photo2 content2"
+    "filler2 filler2"
+    "footer footer";
+    
+}
+
+header{
+    position: relative;
+    border-bottom: solid 6px white;
+    
+
+    h1{
+        
+        font-size: 46px;
+        font-size: 7vw;
+        // margin-top: 6%;
+
+        #hi{
+            display: inline !important; 
+        }
+    }
+
+    .avatar{
+        position: absolute;
+        left: calc(50% - #{$halfAvatarHeight});
+        bottom: -$halfAvatarHeight;
+    }
+}
+
+
+#photo1{
+    grid-area: photo1;
+}
+
+#photo2{
+    grid-area: photo2;
+}
