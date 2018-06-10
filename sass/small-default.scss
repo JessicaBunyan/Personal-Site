@@ -5,6 +5,11 @@ $green: #c1d82f;
 // $fillerHeight: $contentHeight * 2 / 3;
 // $headerHeight: $contentHeight * 2;
 
+*{
+    font-family: 'Open Sans', sans-serif;
+
+}
+
 
 main{
     display: grid;
@@ -27,6 +32,12 @@ main{
 
 
 
+h2{
+    margin: 10px 0 20px 10px;
+}
+
+
+
 header{
     position: relative;
     grid-area: header;
@@ -38,7 +49,6 @@ header{
         letter-spacing: -.02em;
         margin: 30px 7%;
         text-align: center;
-        font-family: 'Open Sans', sans-serif;
         font-size: 50px;
         font-weight: 700;
         color: white;
@@ -51,7 +61,6 @@ header{
     }
     
     .avatar{
-
         display: block;
         margin: 0 auto;
         // height: 35vw;
@@ -75,8 +84,15 @@ header{
 } // end header
 
 .content{
+    h2{
+        font-weight: bold;
+        text-decoration: underline;
+    }
     
     background: $green;
+    p{
+        padding: 20px;
+    }
 }
 
 .filler{
@@ -86,6 +102,15 @@ header{
 
 #content1{
     grid-area: content1;
+    p{
+        margin-top: 8%;
+    }
+    #avatar-spacer{
+        float: right;
+        width: 125px;
+        height: 125px;;
+        shape-outside: polygon(0 0, 125px 0px, 125px 125px, 70px 105px, 15px 50px)
+    }
 }
 
 #content2{

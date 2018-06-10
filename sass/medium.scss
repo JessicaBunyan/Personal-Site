@@ -19,6 +19,13 @@ main{
     
 }
 
+.photo{
+    display: block;
+    img{
+        width: 100%;
+    }
+}
+
 header{
     position: relative;
     background:
@@ -55,6 +62,8 @@ background-size: cover;
 
 #photo1{
     grid-area: photo1;
+    background: url("../img/playing.png");
+    background-size: cover;
 }
 
 #photo2{
