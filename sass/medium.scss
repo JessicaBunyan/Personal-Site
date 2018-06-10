@@ -100,3 +100,43 @@ header{
 #photo2{
     grid-area: photo2;
 }
+
+
+.thumbnail-band{
+    width: 90%;
+    margin: 0 auto;
+    height: 120px;
+    display: flex;
+
+    .thumbnail{
+
+        display: inline-block;
+        height: 100%;;
+        padding: 0px;
+        margin: 0;
+
+        a, img{
+            display: block;
+            margin: 0 auto;
+            height: 100%;
+        }
+        a{
+            width: 160px;
+        }
+        figcaption{
+            padding-top: 4px;
+            text-align: center;;
+        }
+
+        &:last-child{
+            display: block;;
+        }
+    }
+}
+
+.filler{
+    h2 {
+        margin-top: 24px;
+        font-size: 22px;
+    }
+}

@@ -10,6 +10,8 @@
     color: #222;
 }
 
+
+
 // avatar height
 
 // width: 35%;
@@ -119,11 +121,17 @@ header{
     background-color: #222;
     color: white;
 
-    blockquote{
-        text-align: center;
-        font-size: 32px;
-        margin: 5% 5%;
+    *{
+        color: white;
     }
+
+    h2{
+        margin-top: 16px;
+        font-size: 20px;
+        text-align: center;
+        // text-decoration: underline;
+    }
+
 }
 
 #content1{
@@ -152,6 +160,42 @@ header{
 footer{
     background-color: tan; 
     grid-area: footer;
+}
+
+.thumbnail-band{
+    width: 90%;
+    margin: 0 auto;
+    height: 102px;
+    display: flex;
+
+    .thumbnail{
+
+        display: inline-block;
+        height: 100%;;
+        padding: 0px;
+        margin: 0;
+        width: 100%;
+
+        a, img{
+            display: block;
+            margin: 0 auto;
+            height: 100%;
+        }
+        img{
+            width: 100%;
+        }
+        a{
+            width: 136px;
+        }
+        figcaption{
+            padding-top: 4px;
+            text-align: center;;
+        }
+
+        &:last-child{
+            display: none;
+        }
+    }
 }
 
 
