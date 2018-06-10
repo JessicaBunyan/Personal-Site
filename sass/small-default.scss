@@ -1,3 +1,103 @@
-*{
-    background: blue;
-} 
+$green: #c1d82f;
+
+
+// $contentHeight: 200px;
+// $fillerHeight: $contentHeight * 2 / 3;
+// $headerHeight: $contentHeight * 2;
+
+
+main{
+    display: grid;
+    display: -ms-grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 400px 200px 300px 200px 300px 100px;
+    height: 1500px;
+    width: 100%;
+    grid-template-areas: 
+    "header header"
+    "filler1 filler1"
+    "content1 content1"
+    "filler2 filler2"
+    "content2 content2"
+    "footer footer";
+
+    
+    
+}
+
+
+
+header{
+    grid-area: header;
+    background: $green;
+
+
+    h1{
+        line-height: 58px;
+        letter-spacing: -.02em;
+        margin: 10%;
+        text-align: center;
+        strong{
+
+            margin: 0 auto;
+            font-family: 'Open Sans', sans-serif;
+            color: white;
+            font-size: 50px;
+            font-weight: 700;
+
+            #hi{
+                display: none;
+            }
+        }
+    }
+    
+    .avatar{
+        display: block;
+        margin: 0 auto;
+        height: 35vw;
+        width: 35vw;
+        border-radius: 50%;
+    }
+
+
+
+
+
+
+
+
+
+} // end header
+
+.content{
+    
+    background: $green;
+}
+
+.filler{
+    background-color: #222;
+    color: white;
+}
+
+#content1{
+    grid-area: content1;
+}
+
+#content2{
+    grid-area: content2;
+}
+
+
+#filler1{
+    grid-area: filler1;
+}
+
+#filler2{
+    grid-area: filler2;
+}
+
+footer{
+    background-color: tan; 
+    grid-area: footer;
+}
+
