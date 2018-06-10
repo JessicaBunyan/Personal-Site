@@ -7,7 +7,7 @@
 
 *{
     font-family: 'Open Sans', sans-serif;
-
+    color: #222;
 }
 
 // avatar height
@@ -44,7 +44,9 @@ h2{
     margin: 10px 0 20px 10px;
 }
 
-
+blockquote{
+    color: white;
+}
 
 header{
     position: relative;
@@ -60,6 +62,10 @@ header{
         font-size: 50px;
         font-weight: 700;
         color: white;
+
+        *{
+            color: inherit;
+        }
         strong{
 
             margin: 0 auto;
