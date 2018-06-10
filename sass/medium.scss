@@ -7,12 +7,12 @@
 
     // left: min($width *.35, 250px);
     // @media (max-width: 633px){
-    left: calc(50vw + (#{$avatarMaxHeight / 2}) - 16px) ;  
+    left: calc(50vw + (#{$avatarMinHeight / 2}) - 16px) ;  
     // }
-    @media (max-width: 633px){
-        left: calc(67vw  - 16px)   
+    @media (min-width: 633px){
+        left: calc(65vw  - 16px)   
     }
-    @media (max-width: 833px){
+    @media (min-width: 833px){
         left: calc(50vw + (#{$avatarMaxHeight / 2}) - 16px);
     }
 }
