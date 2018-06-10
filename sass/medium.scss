@@ -2,38 +2,18 @@
 
 @import "variables.scss";
 
-@mixin icons-left($w){
-
-
-    // left: min($width *.35, 250px);
-    // @media (max-width: 633px){
-    left: calc(50vw + (#{$avatarMinHeight / 2}) - 16px) ;  
-    // }
-    @media (min-width: 633px){
-        left: calc(65vw  - 16px)   
-    }
-    @media (min-width: 833px){
-        left: calc(50vw + (#{$avatarMaxHeight / 2}) - 16px);
-    }
-}
 
 
 @mixin avatar-position($w){
 
-    // left: min($width *.35, 250px);
-    // @media only screen and (min-width: 633px){
-    background: red !important; 
     left: calc(50vw - (#{$avatarMinHeight / 2}))  ;
     bottom: -#{$avatarMinHeight / 2};  
 
-    // }
     @media only screen and (min-width: 633px){
-        background: cyan !important;
         left: 35vw;
         bottom: -15vw;
     }
     @media only screen and (min-width: 833px){
-        background: tan !important;
         left: calc(50% - #{$avatarMaxHeight / 2});
         bottom: -#{$avatarMaxHeight / 2};    
     }
@@ -42,7 +22,7 @@
 
 main{
     grid-template-columns: 50% 50%;
-    grid-template-rows: 45vh 300px 200px 300px 200px 100px;
+    grid-template-rows: 45vh 35vh 20vh 35vh 20vh 10vh;
     height: 1500px;
     width: 100%;
     grid-template-areas: 
@@ -86,30 +66,7 @@ header{
     background-size: cover;
     // @include avatar-position(10px);
   
-    .icons{
-        position: absolute;
-        @include icons-left(100px);
-        background: $green;
-        height: 46px;
-        width: 240px;
-        bottom: 0px;
-        border-top-right-radius: 6px;
-        display: block;
-        z-index: 3;
-        border-top: solid 6px white;
-        border-right: solid 6px white;
-        // border-bottom: none;
-        
-        a{
-            img{
-                height: 40px;
-            }
-            // width: 40px;
-            &:first-child{
-                padding-left:6px;
-            }
-        }
-    }
+   
 
     h1{
 
