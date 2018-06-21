@@ -163,11 +163,18 @@ header{
 }
 
 footer{
-    background-color: tan; 
+    // background-color: tan; 
+    background:
+    linear-gradient(to bottom right,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0,0 , 0.60)
+        ),
+    url("../img/footer.png");
+    background-size: cover;
     grid-area: footer;
 }
 
-.thumbnail-band{
+.thumbnail-band{ 
     width: 90%;
     margin: 0 auto;
     height: 102px;
