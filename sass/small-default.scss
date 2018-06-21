@@ -164,6 +164,7 @@ header{
 
 footer{
     // background-color: tan; 
+    height: 100%;;
     background:
     linear-gradient(to bottom right,
     rgba(0, 0, 0, 0.6),
@@ -225,4 +226,23 @@ footer{
 
 #photo2{
     display: none;
+}
+
+#cta-box{
+    position: relative;
+    overflow: hidden;
+    background: $green;
+    width: 33%;
+    height: 70%;
+    border-radius: 10px;
+    margin: 5% 0% 0% 5%;
+
+
+    h2{
+        margin-top: 20px;
+        margin-left: 16px;
+        font-weight: bold;
+        font-size: 24px;
+        text-decoration: underline;
+    }
 }
