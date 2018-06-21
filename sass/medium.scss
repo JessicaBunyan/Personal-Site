@@ -59,7 +59,7 @@ header{
         rgba(0, 0, 0, 0.9),
         rgba(0, 0,0 , 0.60)
         ),
-    url("../img/background.jpg");
+    url("../img/hero.jpg");
 
     background-position: center;
     background-size: cover;
@@ -91,9 +91,7 @@ header{
 
 
 #photo1{
-    grid-area: photo1;
-    background: url("../img/playing.png");
-    background-size: cover;
+    background-image: url("../img/playing.png");
 }
 
 #photo2{

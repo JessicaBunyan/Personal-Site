@@ -37,7 +37,7 @@ main{
     "header"
     "filler1"
     "content1"
-    "filler2"
+    "photo1"
     "content2"
     "footer";
 
@@ -212,6 +212,17 @@ footer{
 
 
 
-.photo{
+#photo1{
+    grid-area: photo1;
+    background:
+    linear-gradient(to right,
+        rgba(0, 0, 0, 0.85),
+        rgba(0, 0,0 , 0.75)
+        ),
+    url("../img/hero.jpg");
+    background-size: cover;
+}
+
+#photo2{
     display: none;
 }
