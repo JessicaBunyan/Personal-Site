@@ -65,6 +65,10 @@ header{
         // left: calc(50% - #{$halfAvatarHeight});
         // bottom: -$halfAvatarHeight;
     }
+
+    .photo-credit{
+        bottom: 0px;
+    }
 }
 
 .avatar-mob{
