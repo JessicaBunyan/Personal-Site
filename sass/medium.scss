@@ -80,44 +80,11 @@ header{
 #photo1{
     background-image: url("../img/playing.png");
 }
-
 #photo2{
-    grid-area: photo2;
-    display: block;;
-    text-align: center;
-    
-    position: relative;
-    display: block;
-    background:   
-    linear-gradient(to bottom right,
-    rgba(0, 0, 50, 0.9),
-    rgba(0, 0,0 , 0.7)
-    );
-
-    // h3{
-    //     width: 100%;
-    //     height: 20%;
-    //     line-height: 20%;
-    //     margin: auto;
-    //     display: block;
-    // }
-    // .bg{
-        //     vertical-align: middle;
-        //     // display: table-cell;
-        //     margin: auto;
-        //     position: absolute;
-        //     left:  0;
-        //     top:  0;
-        //     right:  0;
-        //     bottom: 0;
-        // }
-        i{
-            margin-top: 20%;
-            color: white;
-            font-size: 120px;
+    i{
+        margin-top: 30%;
     }
 }
-
 
 .thumbnail-band{
     width: 90%;
@@ -158,4 +125,12 @@ header{
         margin-top: 24px;
         font-size: 22px;
     }
+}
+
+#cta-box{
+    width: 33%;
+    height: 70%;
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
 }

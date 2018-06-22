@@ -31,15 +31,15 @@ main{
     display: grid;
     display: -ms-grid;
     grid-template-columns:100%;
-    grid-template-rows: 600px 200px 300px 200px 300px 100px;
+    grid-template-rows: 600px 300px 200px 300px 200px 300px;
     height: 1500px;
     width: 100%;
     grid-template-areas: 
     "header"
-    "filler1"
     "content1"
-    "photo1"
+    "filler1"
     "content2"
+    "photo2"
     "footer";
 
     
@@ -188,6 +188,7 @@ header{
 footer{
     // background-color: tan; 
     height: 100%;;
+    position: relative;
     background:
     linear-gradient(to bottom right,
     rgba(0, 0, 0, 0.6),
@@ -238,32 +239,44 @@ footer{
 
 #photo1{
     grid-area: photo1;
-    background:
-    linear-gradient(to right,
-        rgba(0, 0, 0, 0.85),
-        rgba(0, 0,0 , 0.75)
-        ),
-    url("../img/hero.jpg");
     background-size: cover;
 }
 
-#photo2{
-    display: none;
-}
+    #photo2{
+        grid-area: photo2;
+        display: block;;
+        text-align: center;
+        
+        position: relative;
+        display: block;
+        background:   
+        linear-gradient(to bottom right,
+        rgba(0, 0, 50, 0.9),
+        rgba(0, 0,0 , 0.7)
+        );
+        
+            i{
+                margin-top: 10%;
+                color: white;
+                font-size: 120px;
+        }
+    }
+    
 
+    // display: none;
 #cta-box{
     position: relative;
     overflow: hidden;
     background: $green;
-    width: 33%;
-    height: 70%;
-    margin: 5% 0% 0% 5%;
+    width:100%;
+    height: 100%;
 
 
     h2{
         margin-top: 20px;
         margin-left: 16px;
         font-weight: bold;
+        text-align: center;
         font-size: 24px;
         text-decoration: underline;
     }
