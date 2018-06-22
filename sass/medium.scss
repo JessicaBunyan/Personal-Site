@@ -27,6 +27,8 @@ main{
 
 #hero{
     height: 100%;;
+    background-position: center;
+
 }
 
 header{
@@ -34,7 +36,6 @@ header{
     display: block; 
     border-bottom: solid 6px white;
     position: relative;
-    background-position: center;
     background-size: cover;
     // @include avatar-position(10px);
   
