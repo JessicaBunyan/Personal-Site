@@ -1,23 +1,7 @@
 
 
 @import "variables.scss";
-
-
-
-@mixin avatar-position($w){
-
-    left: calc(50vw - (#{$avatarMinHeight / 2}))  ;
-    bottom: -#{$avatarMinHeight / 2};  
-
-    @media only screen and (min-width: 633px){
-        left: 35vw;
-        bottom: -15vw;
-    }
-    @media only screen and (min-width: 833px){
-        left: calc(50% - #{$avatarMaxHeight / 2});
-        bottom: -#{$avatarMaxHeight / 2};    
-    }
-}
+@import "mixins.scss";
 
 
 main{
@@ -41,12 +25,8 @@ main{
     }
 }
 
-.test{
-    @include avatar-position(10px);
-    height: 50px;
-    width: 100px;
-    position: absolute;
-
+#hero{
+    height: 100%;;
 }
 
 header{
@@ -54,13 +34,6 @@ header{
     display: block; 
     border-bottom: solid 6px white;
     position: relative;
-    background:
-    linear-gradient(to bottom right,
-        rgba(0, 0, 0, 0.9),
-        rgba(0, 0,0 , 0.60)
-        ),
-    url("../img/hero.jpg");
-
     background-position: center;
     background-size: cover;
     // @include avatar-position(10px);
@@ -81,12 +54,17 @@ header{
     }
 
     .avatar{
+        display: block;
         z-index: 10;    
         position: absolute;
         @include avatar-position(10px);
         // left: calc(50% - #{$halfAvatarHeight});
         // bottom: -$halfAvatarHeight;
     }
+}
+
+.avatar-mob{
+    display: none;
 }
 
 

@@ -1,4 +1,5 @@
 @import "variables.scss";
+@import "mixins.scss";
 
 
 // $contentHeight: 200px;
@@ -45,6 +46,34 @@ main{
     
 }
 
+#hero{
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    top: 0px;
+    display: block;
+
+
+    background:
+    linear-gradient(to bottom right,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0,0 , 0.60)
+        ),
+    url("../img/hero.jpg");
+    background-size: cover;
+}
+
+
+.avatar{
+    margin: 0 auto;
+    // height: 35vw;
+    width: 30%;
+    min-width: 190px;
+    max-width: 250px;
+    border-radius: 50%;
+    border: solid 6px white;
+}
+
 
 
 h2{
@@ -81,28 +110,22 @@ header{
         }
     }
     
-    .avatar{
-        display: block;
-        margin: 0 auto;
-        // height: 35vw;
-        width: 30%;
-        min-width: 190px;
-        max-width: 250px;
-        border-radius: 50%;
-        border: solid 6px white;
-    }
+
 
     #hi{
         display: none;
     }
 
 
-    .icons{
-        display: none;
+
+    .photo-credit{
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+        font-size: 12px;
+        color: #555;
+        padding: 4px;
     }
-
-
- 
 
 } // end header
 
@@ -234,7 +257,6 @@ footer{
     background: $green;
     width: 33%;
     height: 70%;
-    border-radius: 10px;
     margin: 5% 0% 0% 5%;
 
 
