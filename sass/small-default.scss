@@ -26,12 +26,12 @@ h1, h2, h3, h4, figcaption{
 
 // $w: min(35vw, 250px);
 
-
+ 
 main{
     display: grid;
     display: -ms-grid;
     grid-template-columns:100%;
-    grid-template-rows: 400px 200px 300px 200px 300px 100px;
+    grid-template-rows: 600px 200px 300px 200px 300px 100px;
     height: 1500px;
     width: 100%;
     grid-template-areas: 
@@ -47,6 +47,8 @@ main{
 }
 
 #hero{
+    z-index: 1;
+
     position: absolute;
     height: 50%;
     width: 100%;
@@ -60,16 +62,16 @@ main{
         rgba(0, 0,0 , 0.60)
         ),
     url("../img/hero.jpg");
-    background-size: cover;
+    background-size: cover; 
 }
 
 
-.avatar{
+.avatar{ 
+    position: absolute;;
     margin: 0 auto;
-    // height: 35vw;
-    width: 30%;
-    min-width: 190px;
-    max-width: 250px;
+    bottom: 25px;
+    left: calc((100% - 250px)  /2);
+    width: 250px;
     border-radius: 50%;
     border: solid 6px white;
 }
@@ -89,11 +91,13 @@ header{
     grid-area: header;
     background: $green;
 
-
     h1{
+        z-index: 2;
+        width: 86%;
+        position: absolute;;
         line-height: 1.3em;
         letter-spacing: +.06em;
-        margin: 30px 7%;
+        margin: 50px 7%;
         text-align: center;
         font-size: 50px;
         font-weight: 700;
@@ -103,24 +107,20 @@ header{
             color: inherit;
         }
         strong{
-
+ 
             margin: 0 auto;
 
 
-        }
+        } 
     }
-    
-
-
-    #hi{
-        display: none;
-    }
-
+     
+ 
 
 
     .photo-credit{
         position: absolute;
-        bottom: 0px;
+        z-index: 10;
+        bottom: 50%;
         right: 0;
         font-size: 12px;
         color: #555;
