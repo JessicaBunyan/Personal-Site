@@ -6,12 +6,12 @@
 
 main{
     grid-template-columns: 50% 50%;
-    grid-template-rows: 45vh 35vh 25vh 35vh 30vh;
+    grid-template-rows: 45vh 35vh 25vh 35vh 35vh;
     height: 1500px;
     width: 100%;
     grid-template-areas: 
     "header header"
-    "content1 photo1"
+    "content1 photo1" 
     "filler1 filler1"
     "photo2 content2"
     "footer footer";
@@ -69,6 +69,7 @@ header{
 
     .photo-credit{
         bottom: 0px;
+        top: unset;
     }
 }
 
@@ -128,9 +129,9 @@ header{
 }
 
 #cta-box{
-    width: 33%;
-    height: 70%;
+    width: 40%;
+    height: 86%;
     position: absolute;
-    left: 5%;
-    bottom: 5%;
+    left: 3.5%;
+    bottom: 7%;
 }

@@ -86,6 +86,14 @@ blockquote{
     color: white;
 }
 
+.photo-credit{
+
+    transition: color 0.3s;
+    &:hover{
+        color: #999;
+    }
+}
+
 header{
     position: relative;
     grid-area: header;
@@ -120,7 +128,7 @@ header{
     .photo-credit{
         position: absolute;
         z-index: 10;
-        bottom: 50%;
+        top: 0;
         right: 0;
         font-size: 12px;
         color: #555;
@@ -279,5 +287,24 @@ footer{
         text-align: center;
         font-size: 24px;
         text-decoration: underline;
+    }
+
+    .icons{
+        width: 80%;
+        margin: 0 auto;
+        height: 70%;
+        background: white;
+        border-radius: 5px;
+        
+        .row{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+
+        .icon{
+            height: 80px;
+        }
     }
 }
