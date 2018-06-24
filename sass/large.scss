@@ -38,7 +38,11 @@ header{
         font-size: 30px;
     }
     p{
-        padding: 10% 15%;
+        padding: 4% 15%;
+        &.intro{
+            padding-top: 10%;
+
+        }
     }
 }
 
@@ -71,5 +75,14 @@ header{
     h2 {
         margin-top: 32px;
         font-size: 28px;
+    }
+}
+
+#cta-box{
+    h2{
+        font-size: 30px;
+    }
+    .row{
+        margin-top: 10%;
     }
 }

@@ -205,6 +205,9 @@ footer{
     url("../img/footer.png");
     background-size: cover;
     grid-area: footer;
+    .photo-credit{
+        display: none;
+    }
 }
 
 .thumbnail-band{ 
