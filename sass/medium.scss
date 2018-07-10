@@ -9,13 +9,13 @@ main{
     grid-template-rows: 45vh 35vh 25vh 35vh 35vh;
     height: 1500px;
     width: 100%;
-    grid-template-areas: 
+    grid-template-areas:
     "header header"
-    "content1 photo1" 
+    "content1 photo1"
     "filler1 filler1"
     "photo2 content2"
     "footer footer";
-    
+
 }
 
 .photo{
@@ -33,31 +33,31 @@ main{
 
 header{
     background: transparent;
-    display: block; 
+    display: block;
     border-bottom: solid 6px white;
     position: relative;
     background-size: cover;
     // @include avatar-position(10px);
-  
-   
 
-    h1{ 
+
+
+    h1{
         width: 100%;
         font-size: 54px;
         // font-size: 7vw;
         margin: 10% 0 0 0 ;
-        
+
 
         // margin-top: 6%;
 
         #hi{
-            display: inline !important; 
+            display: inline !important;
         }
     }
 
     .avatar{
         display: block;
-        z-index: 10;    
+        z-index: 10;
         position: absolute;
         width: 30%;
         min-width: $avatarMinHeight;
@@ -77,6 +77,20 @@ header{
     display: none;
 }
 
+
+.content{
+    text-align: left;
+    p{
+        font-size: 18px;
+        padding: 10% 10% 5% 10%;
+    }
+}
+
+#content1{
+    #avatar-spacer{
+        display: block;
+    }
+}
 
 #photo1{
     background-image: url("../img/playing.png");

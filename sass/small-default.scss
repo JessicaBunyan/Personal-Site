@@ -26,15 +26,15 @@ h1, h2, h3, h4, figcaption{
 
 // $w: min(35vw, 250px);
 
- 
+
 main{
     display: grid;
     display: -ms-grid;
     grid-template-columns:100%;
-    grid-template-rows: 600px 300px 200px 300px 200px 300px;
+    grid-template-rows: 600px auto 200px auto 200px 300px;
     height: 1500px;
     width: 100%;
-    grid-template-areas: 
+    grid-template-areas:
     "header"
     "content1"
     "filler1"
@@ -42,8 +42,8 @@ main{
     "photo2"
     "footer";
 
-    
-    
+
+
 }
 
 #hero{
@@ -62,11 +62,11 @@ main{
         rgba(0, 0,0 , 0.60)
         ),
     url("../img/hero.jpg");
-    background-size: cover; 
+    background-size: cover;
 }
 
 
-.avatar{ 
+.avatar{
     position: absolute;;
     margin: 0 auto;
     bottom: 25px;
@@ -79,7 +79,7 @@ main{
 
 
 h2{
-    margin: 10px 0 20px 10px;
+    margin: 10px 0 20px 00px;
 }
 
 blockquote{
@@ -115,14 +115,14 @@ header{
             color: inherit;
         }
         strong{
- 
+
             margin: 0 auto;
 
 
-        } 
+        }
     }
-     
- 
+
+
 
 
     .photo-credit{
@@ -138,6 +138,8 @@ header{
 } // end header
 
 .content{
+
+    text-align: center;
     h2{
         text-align: center;
         margin-top: 20px;
@@ -145,11 +147,16 @@ header{
         font-size: 24px;
         text-decoration: underline;
     }
-    
+
     background: $green;
     p{
+        word-wrap: break-word;
+        font-size: 16px;
         line-height: 1.3em;
-        padding: 10%;
+        padding: 3% 10% 5% 10%;
+        &.intro{
+            padding-bottom: 8%;
+        }
     }
 }
 
@@ -173,6 +180,7 @@ header{
 #content1{
     grid-area: content1;
     #avatar-spacer{
+        display: none;
         float: right;
         width: 125px;
         height: 125px;;
@@ -194,7 +202,7 @@ header{
 }
 
 footer{
-    // background-color: tan; 
+    // background-color: tan;
     height: 100%;;
     position: relative;
     background:
@@ -210,7 +218,7 @@ footer{
     }
 }
 
-.thumbnail-band{ 
+.thumbnail-band{
     width: 90%;
     margin: 0 auto;
     height: 102px;
@@ -257,22 +265,22 @@ footer{
         grid-area: photo2;
         display: block;;
         text-align: center;
-        
+
         position: relative;
         display: block;
-        background:   
+        background:
         linear-gradient(to bottom right,
         rgba(0, 0, 50, 0.9),
         rgba(0, 0,0 , 0.7)
         );
-        
+
             i{
                 margin-top: 10%;
                 color: white;
                 font-size: 120px;
         }
     }
-    
+
 
     // display: none;
 #cta-box{
@@ -285,7 +293,7 @@ footer{
 
     h2{
         margin-top: 20px;
-        margin-left: 16px;
+        // margin-left: 16px;
         font-weight: bold;
         text-align: center;
         font-size: 24px;
@@ -297,7 +305,7 @@ footer{
         margin: 0 auto;
         background: white;
         border-radius: 5px;
-        
+
         .row{
             padding: 12px;
             width: 100%;
