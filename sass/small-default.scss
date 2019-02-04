@@ -63,8 +63,25 @@ h2 {
   margin: 10px 0 20px 00px;
 }
 
-blockquote {
+.testimonial {
+  display: none;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
   color: white;
+
+  &:first-of-type {
+    display: block;
+  }
+
+  blockquote {
+    font-size: 18px;
+  }
+  .quote-attribution {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 16px;
+  }
 }
 
 .photo-credit {
