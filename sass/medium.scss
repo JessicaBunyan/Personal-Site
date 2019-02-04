@@ -1,164 +1,162 @@
-
-
 @import "variables.scss";
 @import "mixins.scss";
 
-
-main{
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 45vh 35vh 25vh 35vh 35vh;
-    height: 1500px;
-    width: 100%;
-    grid-template-areas:
+main {
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 45vh 35vh 25vh 35vh 25vh 35vh 35vh;
+  height: 1500px;
+  width: 100%;
+  grid-template-areas:
     "header header"
     "content1 photo1"
     "filler1 filler1"
     "photo2 content2"
+    "filler2 filler2"
+    "content3 photo3"
     "footer footer";
-
 }
 
-.photo{
+.photo {
+  display: block;
+  img {
+    width: 100%;
+  }
+}
+
+#hero {
+  height: 100%;
+  background-position: center;
+}
+
+header {
+  background: transparent;
+  display: block;
+  border-bottom: solid 6px white;
+  position: relative;
+  background-size: cover;
+  // @include avatar-position(10px);
+
+  h1 {
+    width: 100%;
+    font-size: 54px;
+    // font-size: 7vw;
+    margin: 10% 0 0 0;
+
+    // margin-top: 6%;
+
+    #hi {
+      display: inline !important;
+    }
+  }
+
+  .avatar {
     display: block;
-    img{
-        width: 100%;
-    }
-}
-
-#hero{
-    height: 100%;;
-    background-position: center;
-
-}
-
-header{
-    background: transparent;
-    display: block;
-    border-bottom: solid 6px white;
-    position: relative;
-    background-size: cover;
-    // @include avatar-position(10px);
-
-
-
-    h1{
-        width: 100%;
-        font-size: 54px;
-        // font-size: 7vw;
-        margin: 10% 0 0 0 ;
-
-
-        // margin-top: 6%;
-
-        #hi{
-            display: inline !important;
-        }
-    }
-
-    .avatar{
-        display: block;
-        z-index: 10;
-        position: absolute;
-        width: 30%;
-        min-width: $avatarMinHeight;
-        max-width: $avatarMaxHeight;
-        @include avatar-position(10px);
-        // left: calc(50% - #{$halfAvatarHeight});
-        // bottom: -$halfAvatarHeight;
-    }
-
-    .photo-credit{
-        bottom: 0px;
-        top: unset;
-    }
-}
-
-.avatar-mob{
-    display: none;
-}
-
-
-.content{
-    text-align: left;
-    p{
-        font-size: 18px;
-        padding: 10% 10% 5% 10%;
-    }
-}
-
-#content1{
-    #avatar-spacer{
-        display: block;
-    }
-}
-
-#photo1{
-    background-image: url("../img/playing.png");
-}
-#photo2{
-    i{
-        margin-top: 30%;
-    }
-}
-
-.thumbnail-band{
-    width: 90%;
-    margin: 12px auto 12px auto;
-    height: 120px;
-    display: flex;
-
-    .thumbnail{
-
-        display: inline-block;
-        height: 100%;;
-        padding: 0px;
-        margin: 0;
-
-        a, img{
-            display: block;
-            margin: 0 auto;
-            height: 100%;
-        }
-        a{
-            width: 160px;
-        }
-        figcaption{
-            padding-top: 4px;
-            text-align: center;;
-            font-size: 18px;
-        }
-
-        &:last-child{
-            display: block;;
-        }
-    }
-}
-
-.filler{
-    h2 {
-        font-weight: 600;
-        margin-top: 24px;
-        font-size: 22px;
-    }
-}
-
-#cta-box{
-    width: 40%;
-    height: 86%;
+    z-index: 10;
     position: absolute;
-    left: 3.5%;
-    bottom: 7%;
+    width: 30%;
+    min-width: $avatarMinHeight;
+    max-width: $avatarMaxHeight;
+    @include avatar-position(10px);
+    // left: calc(50% - #{$halfAvatarHeight});
+    // bottom: -$halfAvatarHeight;
+  }
+
+  .photo-credit {
+    bottom: 0px;
+    top: unset;
+  }
 }
 
-footer{
-    .photo-credit{
-        display: block;
-        position: absolute;
-        z-index: 10;
-        bottom: 0;
-        right: 0;
-        font-size: 12px;
-        color: #555;
-        padding: 4px;
+.avatar-mob {
+  display: none;
+}
+
+.content {
+  text-align: left;
+  p {
+    font-size: 18px;
+    padding: 10% 10% 5% 10%;
+  }
+}
+
+#content-bio {
+  #avatar-spacer {
+    display: block;
+  }
+}
+
+#photo-bio {
+  background-image: url("../img/playing.png");
+}
+#content-woiaf {
+  display: block;
+  grid-area: content2;
+}
+
+#photo-woiaf {
+  i {
+    margin-top: 30%;
+  }
+}
+
+.thumbnail-band {
+  width: 90%;
+  margin: 12px auto 12px auto;
+  height: 120px;
+  display: flex;
+
+  .thumbnail {
+    display: inline-block;
+    height: 100%;
+    padding: 0px;
+    margin: 0;
+
+    a,
+    img {
+      display: block;
+      margin: 0 auto;
+      height: 100%;
     }
+    a {
+      width: 160px;
+    }
+    figcaption {
+      padding-top: 4px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    &:last-child {
+      display: block;
+    }
+  }
+}
+
+.filler {
+  h2 {
+    font-weight: 600;
+    margin-top: 24px;
+    font-size: 22px;
+  }
+}
+
+#cta-box {
+  width: 40%;
+  height: 86%;
+  position: absolute;
+  left: 3.5%;
+  bottom: 7%;
+}
+
+footer {
+  .photo-credit {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    right: 0;
+    font-size: 12px;
+    color: #555;
+    padding: 4px;
+  }
 }
