@@ -57,8 +57,6 @@ header {
     min-width: $avatarMinHeight;
     max-width: $avatarMaxHeight;
     @include avatar-position(10px);
-    // left: calc(50% - #{$halfAvatarHeight});
-    // bottom: -$halfAvatarHeight;
   }
 
   .photo-credit {
@@ -94,9 +92,8 @@ header {
 }
 
 #photo-woiaf {
-  i {
-    margin-top: 30%;
-  }
+  grid-area: photo2;
+  background-image: url("../img/woiaf.png");
 }
 
 .thumbnail-band {
