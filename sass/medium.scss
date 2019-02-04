@@ -137,6 +137,16 @@ header {
   }
 }
 
+.testimonial {
+  blockquote {
+    font-size: 20px;
+    padding-top: 30px;
+  }
+  .quote-attribution {
+    font-size: 16px;
+  }
+}
+
 #cta-box {
   width: 40%;
   height: 86%;

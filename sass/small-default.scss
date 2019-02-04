@@ -19,7 +19,7 @@ main {
   display: grid;
   display: -ms-grid;
   grid-template-columns: 100%;
-  grid-template-rows: 600px auto 200px auto 200px auto 300px;
+  grid-template-rows: 600px auto 200px auto 230px auto 300px;
   height: 1500px;
   width: 100%;
   grid-template-areas:
@@ -69,18 +69,24 @@ h2 {
   margin: 0 auto;
   text-align: center;
   color: white;
+  position: relative;
+  height: 170px;
 
   &:first-of-type {
     display: block;
   }
 
   blockquote {
+    padding-top: 12px;
     font-size: 18px;
   }
   .quote-attribution {
-    display: inline-block;
+    width: 100%;
+    position: absolute;
+    bottom: 12px;
+    display: block;
     margin-top: 20px;
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 

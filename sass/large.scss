@@ -72,6 +72,21 @@ header {
   }
 }
 
+.testimonial {
+  height: 280px;
+  blockquote {
+    padding-top: 60px;
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+    font-size: 28px;
+  }
+  .quote-attribution {
+    font-size: 20px;
+    bottom: 32px;
+  }
+}
+
 #cta-box {
   h2 {
     font-size: 30px;
