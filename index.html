@@ -1,110 +1,213 @@
 <html>
-<head>
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/jessica-tiny.css">
-    <link rel="stylesheet" href="./styles/jessica-small-default.css">
-    <link rel="stylesheet" href="./styles/jessica-medium.css">
-    <link rel="stylesheet" href="./styles/jessica-large.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <head>
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-</head>
-
-
-<body>
-        <div class="tiny-screen">
-            <p class="question-mark">
-                ?
-            </p>
-            <p>
-
-                Is your screen really this small?
-            </p>
-            </div>
-    <div class="header-bar">
-
-    </div> 
-    <header>
-        <div class="header-content">
-
-            <!-- <div class="image-holder"> -->
-                <img class="avatar" src="img/me.png">
-                <div class="blurb">
-                    <h1>Jessica Bunyan</h2>
-                        <h4 class="subtitle">Web Developer &amp; SSBM Commentator</h4>
-
-                        
-                    </div>
-                    <div class="icons">
-                            <a href="https://www.twitter.com/jessicacasts">
-                                <img src="img/Twitter.png" class="icon">
-                            </a>
-                            <a href="mailto:jessicabunyan93@gmail.com">
-                                <img src="img/Mail.png" class="icon">
-                            </a>
-                            <a href="https://www.linkedin.com/in/jessicabunyan/">
-                                <img src="img/linkedin.png" class="icon">
-                            </a>
-                            <a href="https://www.github.com/JessicaBunyan">
-                                <img src="img/GitHub.png" class="icon wide">
-                            </a>
-                        </div>
-                    <!-- </div> -->
-
-                </div>
-        </header>
-        <div class="header-filler"></div>
-    <div class="central-column">
-        <div class="tile">
-            <h2><i class="fa fa-wrench"></i>Responsive Design!</h2>
-            <hr  >
-            <p class="no-link">
-                Welcome to version 1 of my home page! The page design will adapt to fit a phone, tablet or computer screen. If you want a sneak peak of version 2 you can see bleeding edge changes on my github. A release will be coming soon to replace this page!
-                    
-                </p>
-                <a class="tile-link" href="https://www.github.com/jessicaBunyan">
-                    <span class="link-title">GitHub</span>
-                    <i class="goto fa fa-external-link-alt"></i>
-                </a>
-            </div>
-        <div class="tile">
-            <h2><i class="fa fa-gamepad"></i>Team SDS Website</h2>
-            <hr>
-            <p>
-                    The Team SDS website is no longer being hosted on www.sds.gg. A snapshot of the site can be found via the link below</p>
-            <a class="tile-link" href="./SDS/index">
-                    <span class="link-title">Team SDS</span>
-                <i class="goto fa fa-external-link-alt"></i>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>Jessica Bunyan</title>
+  </head>
+  <body>
+    <main>
+      <div id="pre-header"></div>
+      <header>
+        <div id="hero"></div>
+        <h1>HI, I'M JESSICA BUNYAN</h1>
+        <img class="avatar" src="img/me.png" />
+        <a href="https://www.flickr.com/photos/146501403@N04/">
+          <span class="photo-credit"> Photo Credit: Carl Paradise </span>
+        </a>
+      </header>
+      <div id="content-bio" class="content">
+        <div id="avatar-spacer"></div>
+        <p class="intro">
+          I'm a web developer and Esports broadcaster based in Reading, England.
+        </p>
+        <p>
+          Welcome to my personal website. This page leverages CSS3 grids to
+          deliver a responsive design which will adapt to fit any screen, from a
+          mobile to a large computer monitor
+        </p>
+      </div>
+      <div id="photo-bio" class="photo"></div>
+      <div id="filler1" class="filler">
+        <h2>My Smash Content</h2>
+        <div class="thumbnail-band">
+          <figure class="thumbnail">
+            <a
+              href="https://www.youtube.com/watch?v=fzJoKUkhuRY&index=10&list=PLQ3JBK7Qwuf58GzogbRfRo5dXTNftwcRn"
+            >
+              <img src="img/vlog2.jpg" />
             </a>
+            <figcaption>Vlogs</figcaption>
+          </figure>
+          <figure class="thumbnail">
+            <a href="https://smash.gg/heir-5/"> <img src="img/heir.jpg" /> </a>
+            <figcaption>Heir 5</figcaption>
+          </figure>
+          <figure class="thumbnail">
+            <a href="/SDS"> <img src="img/SDS.png" /> </a>
+            <figcaption>SDS Website</figcaption>
+          </figure>
         </div>
-        <div class="tile">
-                <h2><i class="fa fa-code"></i>Words of Ice and Fire</h2>
-                <hr  >
-                <p>
-                        Words of Ice and Fire is a textual analysis of the books behind HBO's Game of Thrones. See the distribution of key words across each character and chapter. This web app is developed in React and utilises d3.js and HTML5 canvas
-                    </p>
-                <a class="tile-link" href="http://jessica.bunyan.com/WOIAF">
-                    <span class="link-title">Words of Ice and Fire</span>
-                    <i class="goto fa fa-external-link-alt"></i>
-                </a>
-            </div>
-            <div class="tile">
-                <h2><i class="fab fa-youtube"></i>Vlogs</h2>
-                <hr  >
-                <p>
-                        I'm taking a break from producing video content, but you can check out my old SSBM videos on Youtube! Vlogs, Match Analysis and Tournament Replays
-                        
-                    </p>
-                <a class="tile-link" href="https://www.youtube.com/watch?v=fzJoKUkhuRY&index=10&list=PLQ3JBK7Qwuf58GzogbRfRo5dXTNftwcRn">
-                        <span class="link-title">Youtube</span>
-                    <i class="goto fa fa-external-link-alt"></i>
-                </a>
-            </div>
-    </div>
+      </div>
+      <div id="photo-woiaf" class="photo"></div>
+      <div id="content-woiaf" class="content">
+        <a class="desktop-only-link" href="./WOIAF"
+          ><h2>Words of Ice and Fire</h2></a
+        >
+        <p>
+          A textual analysis of the books behind HBO's <i>Game of Thrones</i>.
+          Fans of the series can use this web app to see the distribution &
+          frequency of key words across each book and chapter.
+        </p>
+        <p>
+          <a class="inline-link desktop-only-link" href="./WOIAF">The App</a> is
+          built with ReactJS and uses d3 and HTML5 canvas to graph the results.
+          The dataset is generated from a C# backend which can be found on my
+          Github
+        </p>
+      </div>
+      <div id="photo-objects" class="photo"></div>
+      <div id="content-objects" class="content">
+        <h2>Objects</h2>
+        <p>
+          Objects is a short game about identity, finding yourself, and also
+          about Object Oriented Programming. Move around the playground and see
+          which objects you can find, pick up variables and use them like items
+          to solve problems. Objects is designed to convey the core prinicples
+          of Objects Oriented Programming, without the player reading or writing
+          single line of code.
+        </p>
+      </div>
+      <div id="filler2" class="filler">
+        <h2>Heir 5 Testimonials</h2>
+        <div class="testimonial">
+          <blockquote>
+            "Heir honestly was more than a tournament. Always had an amazing
+            time there and Team Heir proved that a world class event could be
+            done in Europe"
+          </blockquote>
+          <a
+            class="desktop-only-link"
+            href="https://twitter.com/ArmadaUGS/status/1078142431458152453"
+          >
+            <span class="quote-attribution"
+              >- Armada, #2 ranked player worldwide</span
+            >
+          </a>
+        </div>
+        <div class="testimonial">
+          <blockquote>
+            "One of the best days of my life. Thank you to @TeamHeir for such an
+            amazing event. Didn’t know a tourney could be this fun"
+          </blockquote>
+          <a
+            class="desktop-only-link"
+            href="https://twitter.com/G2Westballz/status/1031340517399904257"
+          >
+            <span class="quote-attribution">
+              - Weston Dennis, top 20 player worldwide
+            </span>
+          </a>
+        </div>
+        <div class="testimonial">
+          <blockquote>
+            "The passion that all of the EU has for Heir is a direct reflection
+            of the passion that Team Heir has for the scene. Their work ethic
+            and their positivity is unparalleled and inspiring"
+          </blockquote>
+          <a
+            class="desktop-only-link"
+            href="https://twitter.com/moby_osman/status/1031532544863424512"
+          >
+            <span class="quote-attribution"
+              >- Caspar, Tournament Organiser</span
+            >
+          </a>
+        </div>
+        <div class="testimonial">
+          <blockquote>
+            "Heir 5 was my favourite tournament since Genesis 1. There's so much
+            to it that it's hard to put into words"
+          </blockquote>
+          <a
+            class="desktop-only-link"
+            href="https://twitter.com/boxrZhu/status/1031678363402940416"
+          ></a>
+          <span class="quote-attribution">
+            - Zhu, professional player & vlogger
+          </span>
+        </div>
+        <div class="testimonial">
+          <blockquote>
+            "The social aspect of Heir is better than it is for any other
+            tournament in the world"
+          </blockquote>
+          <a
+            class="desktop-only-link"
+            href="https://twitter.com/ArmadaUGS/status/1031886187965952000"
+          >
+            <span class="quote-attribution"
+              >- Armada, #2 ranked player worldwide</span
+            >
+          </a>
+        </div>
+        <div class="testimonial">
+          <blockquote>
+            "Never have I seen as much love, effort and respect for the
+            community’s identity than at Heir. It’s a masterpiece of grassroots
+            Smash.
+          </blockquote>
+          <a
+            class="desktop-only-link"
+            href="https://twitter.com/MrKingFunk/status/1077875059748937728"
+          >
+            <span class="quote-attribution">
+              Julius Vissing, Tournament Organiser
+            </span>
+          </a>
+        </div>
+      </div>
 
-
-</body>
-
-
+      <footer>
+        <div id="cta-box">
+          <h2>Get in touch</h2>
+          <div class="icons">
+            <span class="row r1">
+              <a id="github-left" href="https://www.github.com/JessicaBunyan">
+                <img src="GitHub.png" class="icon wide" />
+              </a>
+              <a href="https://www.linkedin.com/in/Jessicabunyan/">
+                <img src="img/linkedin.png" class="icon" />
+              </a>
+            </span>
+            <span class="row r2">
+              <a href="https://www.twitter.com/JessicaCasts">
+                <img src="Twitter.png" class="icon" />
+              </a>
+              <a href="mailto:Jessicabunyan93@gmail.com">
+                <img src="Mail.png" class="icon" />
+              </a>
+            </span>
+          </div>
+        </div>
+        <a href="https://www.flickr.com/photos/146501403@N04/">
+          <span class="photo-credit"> Photo Credit: Carl Paradise </span>
+        </a>
+      </footer>
+    </main>
+  </body>
 </html>

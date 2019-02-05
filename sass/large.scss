@@ -1,0 +1,113 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+main {
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 55vh 500px 360px 500px 360px 500px 480px;
+  height: 1500px;
+  width: 100%;
+  grid-template-areas:
+    "header header"
+    "content1 photo1"
+    "filler1 filler1"
+    "photo2 content2"
+    "filler2 filler2"
+    "content3 photo3"
+    "footer footer";
+}
+
+header {
+  border-bottom-width: 8px;
+
+  h1 {
+    font-size: 86px;
+  }
+
+  .avatar {
+    border-width: 8px;
+  }
+} // end header
+
+.content {
+  font-size: 24px;
+  h2 {
+    margin-top: 40px;
+    font-size: 30px;
+  }
+  p {
+    font-size: 24px;
+    padding: 4% 15%;
+    &.intro {
+      padding-top: 10%;
+      padding-bottom: 8%;
+    }
+  }
+}
+
+.desktop-only-link {
+  pointer-events: all;
+  text-decoration: underline;
+}
+
+.thumbnail-band {
+  width: 90%;
+  margin: 0 auto;
+  height: 208px;
+
+  .thumbnail {
+    a,
+    img {
+      display: block;
+      margin: 0 auto;
+      height: 100%;
+    }
+    a {
+      width: 280px;
+    }
+
+    .figcaption {
+      font-size: 22px;
+    }
+  }
+}
+
+.filler {
+  h2 {
+    margin-top: 32px;
+    font-size: 28px;
+  }
+}
+
+.testimonial {
+  height: 280px;
+  blockquote {
+    padding-top: 60px;
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+    font-size: 28px;
+  }
+  .quote-attribution {
+    font-size: 20px;
+    bottom: 32px;
+  }
+}
+
+#cta-box {
+  bottom: 8%;
+  height: 84%;
+  .icons {
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  .row {
+    margin-top: 0;
+  }
+
+  .icons img.icon {
+    height: 120px;
+  }
+}
