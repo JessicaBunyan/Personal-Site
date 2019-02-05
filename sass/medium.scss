@@ -73,7 +73,11 @@ header {
   text-align: left;
   p {
     font-size: 18px;
-    padding: 10% 10% 5% 10%;
+    padding: 4% 10% 0% 10%;
+
+    &.intro {
+      padding-bottom: 13%;
+    }
   }
 }
 
