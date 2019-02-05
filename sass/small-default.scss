@@ -15,6 +15,10 @@ figcaption {
   letter-spacing: +0.06em;
 }
 
+.woiaf-link {
+  pointer-events: none;
+}
+
 main {
   display: grid;
   display: -ms-grid;
