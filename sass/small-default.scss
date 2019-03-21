@@ -74,6 +74,10 @@ main {
   position: relative;
   height: 170px;
 
+  &.active {
+    display: block;
+  }
+
   &:first-of-type {
     display: block;
   }

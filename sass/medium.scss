@@ -155,20 +155,20 @@ header {
   .quote-attribution {
     font-size: 16px;
   }
+}
 
-  .arrow {
-    display: block;
-    position: absolute;
-    font-size: 48px;
-    opacity: 0.5;
-  }
-  .arrow-left {
-    left: -25px;
-  }
+.arrow {
+  display: block;
+  position: absolute;
+  font-size: 48px;
+  opacity: 0.5;
+}
+.arrow-left {
+  left: 25px;
+}
 
-  .arrow-right {
-    right: -25px;
-  }
+.arrow-right {
+  right: 25px;
 }
 
 #cta-box {
