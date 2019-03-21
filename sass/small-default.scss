@@ -62,10 +62,16 @@ main {
   border: solid 6px white;
 }
 
+.arrow {
+  display: none;
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
 .testimonial {
-  .arrow {
-    display: none;
-  }
   display: none;
   width: 80%;
   margin: 0 auto;
