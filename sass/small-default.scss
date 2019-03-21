@@ -84,10 +84,6 @@ main {
     display: block;
   }
 
-  &:first-of-type {
-    display: block;
-  }
-
   blockquote {
     padding-top: 12px;
     font-size: 18px;
@@ -170,6 +166,8 @@ header {
 .filler {
   background-color: #222;
   color: white;
+  position: relative;
+  overflow: hidden;
 
   * {
     color: white;
