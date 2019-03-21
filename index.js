@@ -9,25 +9,30 @@ window.addEventListener("DOMContentLoaded", e => {
 function moveLeft() {
   var active = document.querySelector(".testimonial.active");
 
+  var next = active.previousElementSibling;
+
+  if (!next) {
+    return;
+  }
+
   active.classList.add("right");
   active.classList.remove("active");
-
-  var next = active.previousElementSibling;
   next.classList.add("active");
   next.classList.remove("left");
-
-  console.log(active);
 }
 
 function moveRight() {
   var active = document.querySelector(".testimonial.active");
 
+  var next = active.nextElementSibling;
+
+  console.log(next);
+  if (!next) {
+    return;
+  }
+
   active.classList.add("left");
   active.classList.remove("active");
-
-  var next = active.nextElementSibling;
   next.classList.add("active");
   next.classList.remove("right");
-
-  console.log(active);
 }
