@@ -146,14 +146,26 @@ header {
     font-size: 22px;
   }
 }
-
 .testimonial {
+  display: inline-block;
+  position: absolute;
+  transition: left 1s;
   blockquote {
     font-size: 20px;
     padding-top: 30px;
   }
   .quote-attribution {
     font-size: 16px;
+  }
+
+  &.right {
+    left: 100%;
+  }
+  &.left {
+    left: -100%;
+  }
+  &.active {
+    left: 10%;
   }
 }
 
