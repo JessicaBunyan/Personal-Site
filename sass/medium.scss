@@ -172,8 +172,10 @@ header {
 .arrow {
   display: block;
   position: absolute;
+  z-index: 10;
   font-size: 48px;
   opacity: 0.5;
+  top: 40%;
 }
 .arrow-left {
   left: 25px;
