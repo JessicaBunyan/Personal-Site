@@ -63,6 +63,9 @@ main {
 }
 
 .testimonial {
+  .arrow {
+    display: none;
+  }
   display: none;
   width: 80%;
   margin: 0 auto;
@@ -199,7 +202,6 @@ header {
 }
 
 footer {
-  // background-color: tan;
   height: 100%;
   position: relative;
   background: linear-gradient(
