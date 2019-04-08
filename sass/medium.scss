@@ -25,7 +25,13 @@ main {
 
 #hero {
   height: 100%;
-  background-position: center;
+  background-position: top;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("../img/hero_l.jpg");
 }
 
 header {
