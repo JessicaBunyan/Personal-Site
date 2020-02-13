@@ -71,6 +71,13 @@ header {
   }
 }
 
+#photo-bio .photo-credit {
+  position: absolute;
+  top: 0px;
+  bottom: unset;
+  color: #777;
+}
+
 .avatar-mob {
   display: none;
 }
@@ -94,7 +101,7 @@ header {
 }
 
 #photo-bio {
-  background-image: url("../img/playing.png");
+  background-image: url("../img/playing.jpg");
 }
 
 #photo-objects {
@@ -201,15 +208,16 @@ header {
   bottom: 5%;
 }
 
-footer {
-  .photo-credit {
-    display: block;
-    position: absolute;
-    z-index: 10;
-    bottom: 0;
-    right: 0;
-    font-size: 12px;
-    color: #555;
-    padding: 4px;
-  }
+.photo-credit {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
+  color: #555;
+  padding: 4px;
+}
+.footer .photo-credit {
+  display: block;
 }

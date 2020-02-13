@@ -102,7 +102,7 @@ main {
 .photo-credit {
   transition: color 0.3s;
   &:hover {
-    color: #999;
+    color: #999 !important;
   }
 }
 
