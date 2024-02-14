@@ -1,3 +1,3 @@
-# Jessica.Bunyan.com
+# Personal Site 
 
-Source files for my personal web page which you can find at http://jessica.bunyan.com
+Source files for my personal web page which you can find at TBC # TODO
