@@ -1,26 +1,38 @@
+<!DOCTYPE html>
+
 <html>
 	<head>
+		
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
-
+		
 		<link rel="stylesheet" href="./reset.css" />
 		<link rel="stylesheet" href="site.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-			rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet"
 		/>
 		<link
-			href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-			rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet"
 		/>
-
+		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		
+		
 		<title>Jessica Bunyan</title>
+		<!-- <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"> -->
+		<link rel="icon" type="image/png" href="assets/favicon.png" />
+
 	</head>
 
-	<body>
+	<body id="body">
 		<div id="content">
+			<!-- <img src="squiggle.xml"> -->
 			<div id="bg"></div>
+			<div id="bg2"><div id="wave"></div></div>
+			<div id="bg3"></div>
 			<!-- <div id="bg-top"></div>
 			<div id="bg-bottom"></div> -->
 			<nav class="desktop-only">
@@ -31,7 +43,7 @@
 				</ul>
 			</nav>
 
-			<main>
+			<main id="main">
 				<h1>Jessica Bunyan</h1>
 
 				<section>
@@ -53,8 +65,8 @@
 					</p>
 
 					<div class="btn-group">
-						<a class="cta" href="JessicaBunyanCV.pdf" target="_blank" download>
-							<img src="download.svg" />
+						<a class="button cta" href="assets/JessicaBunyanCV.pdf" target="_blank" download>
+							<img src="assets/download.svg" />
 
 							Download CV
 						</a>
@@ -66,8 +78,8 @@
 					</div>
 				</section>
 
-				<hr class="desktop-only" />
-				<section>
+				<!-- <hr class="desktop-only" /> -->
+				<section id="testimonials">
 					<h2>Testimonials</h2>
 					<figure class="testimonial">
 						<blockquote cite="https://www.linkedin.com/in/jessicabunyan/">
@@ -97,16 +109,16 @@
 				<section id="contact">
 					<h2>Contact & Links</h2>
 					<div class="card-grid">
-						<a class="contact-card" href="mailto:JBSoftwareConsulting@gmail.com?subject=Software Contract">
-							<img src="email.svg" />
+						<a class="button contact-card" href="mailto:JBSoftwareConsulting@gmail.com?subject=Software Contract">
+							<img src="assets/email.svg" />
 							Email
 						</a>
-						<a class="contact-card" href="https://linkedin.com/in/JessicaBunyan" target="_blank">
-							<img src="linkedin_in.png" />
+						<a class="button contact-card" href="https://linkedin.com/in/JessicaBunyan" target="_blank">
+							<img src="assets/linkedin_in.png" />
 							LinkedIn
 						</a>
-						<a class="contact-card" href="https://github.com/JessicaBunyan" target="_blank">
-							<img src="github.svg" />
+						<a class="button contact-card" href="https://github.com/JessicaBunyan" target="_blank">
+							<img src="assets/github.svg" />
 							Github
 						</a>
 					</div>
@@ -115,4 +127,16 @@
 			</main>
 		</div>
 	</body>
+	<script type="text/javascript" defer>
+
+			window.addEventListener("scroll", (e) => {
+				var wave = document.getElementById("bg2")
+				console.log(document.scrollingElement.scrollTop)
+				// wave.style.left = document.scrollingElement.scrollTop + "px"
+				var left = document.scrollingElement.scrollTop - 8000 + "px"
+				wave.style.marginLeft= document.scrollingElement.scrollTop + "px"
+				// document.scrollingElement.scrollTop
+			})
+
+	</script>
 </html>
