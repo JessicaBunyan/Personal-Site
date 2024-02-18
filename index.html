@@ -5,8 +5,7 @@
 		
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
 		
-		<link rel="stylesheet" href="./reset.css" />
-		<link rel="stylesheet" href="site.css" />
+		<link rel="stylesheet" href="index.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -31,7 +30,7 @@
 		<div id="content">
 			<!-- <img src="squiggle.xml"> -->
 			<div id="bg"></div>
-			<div id="bg2"><div id="wave"></div></div>
+			<div id="bg2"><div id="wave"></div><img src="assets/goose.png" id="goose"/></div>
 			<div id="bg3"></div>
 			<!-- <div id="bg-top"></div>
 			<div id="bg-bottom"></div> -->
@@ -130,13 +129,25 @@
 	<script type="text/javascript" defer>
 
 			window.addEventListener("scroll", (e) => {
-				var wave = document.getElementById("bg2")
+				var wave = document.getElementById("wave")
+				var goose = document.getElementById("goose")
 				console.log(document.scrollingElement.scrollTop)
+				var speedFactor = .6
+				var xMovement = document.scrollingElement.scrollTop * speedFactor
 				// wave.style.left = document.scrollingElement.scrollTop + "px"
-				var left = document.scrollingElement.scrollTop - 8000 + "px"
-				wave.style.marginLeft= document.scrollingElement.scrollTop + "px"
+				var waveLeft = xMovement - 8000 + "px"
+				var gooseLeft = 500 + xMovement + "px"
+				var gooseAngle = 0.2;
+
+
+				wave.style.marginLeft= waveLeft;
+				goose.style.marginLeft = gooseLeft
+				goose.style.marginBottom = xMovement * gooseAngle + "px"
+
+
+				
 				// document.scrollingElement.scrollTop
 			})
 
-	</script>
+	</script> 
 </html>

@@ -1,0 +1,9 @@
+{
+    "bundlerOptions": {
+        "entryFile": "src/index.scss",
+        "rootDir": "/src",
+        "outFile": "src/bundle.scss",
+        "ignoreImports": [""],
+        "logLevel": "silent"
+    }
+}

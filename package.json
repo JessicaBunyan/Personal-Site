@@ -1,0 +1,25 @@
+{
+  "name": "jessicabunyancom",
+  "version": "1.0.0",
+  "description": "Source files for my personal web page which you can find at TBC # TODO",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run bundle-sass && npm run transpile-sass",
+    "bundle-sass": "scss-bundle",
+    "transpile-sass": "node-sass bundle.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessicabunyan/Personal-Site.git"
+  },
+  "author": "Jessica Bunyan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessicabunyan/Personal-Site/issues"
+  },
+  "homepage": "https://github.com/jessicabunyan/Personal-Site#readme",
+  "dependencies": {
+    "node-sass": "^9.0.0",
+    "scss-bundle": "^3.1.2"
+  }
+}
