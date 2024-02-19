@@ -4,9 +4,11 @@
   "description": "Source files for my personal web page which you can find at TBC # TODO",
   "main": "index.js",
   "scripts": {
-    "build": "npm run bundle-sass && npm run transpile-sass",
-    "bundle-sass": "scss-bundle",
-    "transpile-sass": "node-sass bundle.scss"
+    "dev": "",
+    "build": "npm run build-css && cp src/index.html dist/index.html ", 
+    "bundle-sass": "scss-bundle  -e src/index.scss -o src/bundle.scss",
+    "build-css": "npm run bundle-sass && npm run transpile-sass && rm src/bundle.scss",
+    "transpile-sass": "node-sass src/bundle.scss -o dist/index.css"
   },
   "repository": {
     "type": "git",
