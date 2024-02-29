@@ -1,4 +1,15 @@
-import "https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js";
+console.log("woo");
+console.log(document.getElementById("wave"));
+const needsPolyfill =
+  getComputedStyle(document.getElementById("wave")).animationTimeline ===
+  undefined;
+
+if (needsPolyfill) {
+  var script = document.createElement("script"); // create a script DOM node
+  script.src =
+    "https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js";
+  document.head.appendChild(script);
+}
 
 function rand(min, max) {
   // min and max included
@@ -6,8 +17,6 @@ function rand(min, max) {
 }
 let isGooseHidden = false;
 let canUnhideGoose = false;
-const speedFactor = 0.5;
-const gooseAngle = 0.3;
 
 const wave = document.getElementById("wave");
 
@@ -78,14 +87,10 @@ const end = `L ${totalWidth} 420 Z`;
 wave.style.clipPath = `path("${path} ${end}")`;
 
 const throttle = (fn, delay) => {
-  // Capture the current time
   let time = Date.now();
 
-  // Here's our logic
   return () => {
     if (time + delay - Date.now() <= 0) {
-      // Run the function we've passed to our throttler,
-      // and reset the `time` variable (so we can check again).
       fn();
       time = Date.now();
     }
@@ -152,9 +157,11 @@ const tick = () => {
 };
 
 // window.addEventListener("scroll", throttle(tick, 5));
-// window.addEventListener("keydown", (e) => {
-//   if (e.key == "g") {
-//     console.log("adding goose");
-//     addGoose();
-//   }
-// });
+window.addEventListener("keydown", (e) => {
+  if (e.key == "g") {
+    console.log("adding goose");
+    // addGoose();
+    console.log(document.getElementById("wave").style.animationTimeline);
+    console.log(document.getElementById("wave").style);
+  }
+});

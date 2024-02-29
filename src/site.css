@@ -1,12 +1,8 @@
 :root {
-  /* --clr-accent: #915A00; */
   --clr-accent: black;
   --top-margin: 6rem;
-
-  --name-font: "Transport Medium";
-  /* --name-font: "sans serif"; */
+  --name-font: "Transport Medium" sans-serif;
   --name-font-weight: 400;
-  /* --background: #6e9c78 ; */
   --background2: #86a1cc;
 }
 
@@ -18,10 +14,6 @@
   h1 {
     font-size: 5rem !important;
   }
-}
-
-* {
-  /* overflow-x: hidden;  */
 }
 
 @font-face {
@@ -174,12 +166,12 @@ br {
   border-radius: 8px;
 }
 
-.cta:hover,
-.cta:focus {
+.button:hover,
+.button:focus {
   background-color: #333;
 }
 
-.cta img {
+.button img {
   height: 2rem;
   width: 2rem;
   vertical-align: bottom;
