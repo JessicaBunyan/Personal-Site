@@ -6,16 +6,11 @@ function rand(min, max) {
 }
 let isGooseHidden = false;
 let canUnhideGoose = false;
-let totalScrollDistance = 0;
-let prevScrollPosition = 0;
 const speedFactor = 0.5;
 const gooseAngle = 0.3;
 
 const wave = document.getElementById("wave");
 
-const start = "M 0 420 ";
-
-// const wavesPerScreen = Math.floor(window.innerWidth / 300);
 const wavesPerScreen = 6;
 const overflowFactor = 5;
 const numWaves = wavesPerScreen * overflowFactor;
@@ -31,8 +26,6 @@ const minWaveHeight = 100;
 
 const points = [[0, 420]];
 
-const getY = () => {};
-
 for (let i = 0; i < numWaves; i++) {
   const isUp = i % 2 === 0;
   const thisWaveWidth = rand(
@@ -42,14 +35,10 @@ for (let i = 0; i < numWaves; i++) {
   const x = penX + thisWaveWidth;
 
   let y = prevY;
-  // do {
   y = rand(
     isUp ? prevY + minWaveHeight : prevY - minWaveHeight,
     isUp ? minWavePeak : maxWavePeak
   );
-  // console.log(Math.abs(y - prevY));
-  //   // y = rand(0, 420);
-  // } while (Math.abs(y - prevY) < 100);
 
   points.push([x, y]);
 
@@ -57,8 +46,6 @@ for (let i = 0; i < numWaves; i++) {
   prevY = y;
 }
 
-// points.sort((a, b) => a[0] - b[0]);
-// points.forEach((point, index) => (point[1] = point[1] - index * 15));
 points.push([totalWidth, 420]);
 
 path = "M" + points[0][0] + "," + points[0][1];
@@ -87,44 +74,8 @@ for (let i = 0; i < points.length - 1; i++) {
       points[i + 1][1]);
 }
 
-// const path = "C 20 20, 40 40, 90 90 C 400 400, 250 260, 300 300";
 const end = `L ${totalWidth} 420 Z`;
-// wave.style.clipPath = `path("${start}${path} ${end}")`;
 wave.style.clipPath = `path("${path} ${end}")`;
-
-function positionWave() {
-  const wave = document.getElementById("wave");
-  // const diff = Math.abs(
-  //   document.scrollingElement.scrollTop - prevScrollPosition
-  // );
-  // totalScrollDistance = totalScrollDistance + diff;
-  const waveMovement = document.scrollingElement.scrollTop * speedFactor;
-  // const waveMovement = totalScrollDistance * speedFactor;
-  // prevScrollPosition = document.scrollingElement.scrollTop;
-  const waveLeft = -300 - waveMovement + "px";
-  wave.style.left = waveLeft;
-}
-
-function positionGoose() {
-  if (isGooseHidden) {
-    return false;
-  }
-
-  const goose = document.getElementById("goose1");
-  const scrollBottom = document.scrollingElement.scrollTop + window.innerHeight;
-  const gooseMovement =
-    (document.body.scrollHeight - scrollBottom) * speedFactor;
-
-  const gooseEndLeft = 100;
-  const gooseTravelDistance = gooseMovement - gooseEndLeft;
-  const gooseLeft = `calc(100% - ${gooseTravelDistance}px)`;
-  const gooseBottom = 550 - gooseMovement * gooseAngle + "px";
-  // console.log(gooseBottom);
-
-  goose.style.left = gooseLeft;
-  goose.style.bottom = gooseBottom;
-  return gooseTravelDistance < 0;
-}
 
 const throttle = (fn, delay) => {
   // Capture the current time
@@ -141,14 +92,11 @@ const throttle = (fn, delay) => {
   };
 };
 
-console.log(document.scrollingElement.scrollHeight);
-
 let triggerPoint = null;
 function setTriggerPoint() {
   triggerPoint = rand(600, document.scrollingElement.scrollHeight - 300);
 }
 setTriggerPoint();
-console.log(triggerPoint);
 
 const addGoose = () => {
   const waveContainer = document.getElementById("wave-container");
@@ -170,8 +118,6 @@ const addGoose = () => {
   console.log(goose.style.animationDuration);
 };
 
-addGoose();
-addGoose();
 const tick = () => {
   if (
     triggerPoint &&
@@ -205,10 +151,10 @@ const tick = () => {
   }
 };
 
-window.addEventListener("scroll", throttle(tick, 5));
-window.addEventListener("keydown", (e) => {
-  if (e.key == "g") {
-    console.log("adding goose");
-    addGoose();
-  }
-});
+// window.addEventListener("scroll", throttle(tick, 5));
+// window.addEventListener("keydown", (e) => {
+//   if (e.key == "g") {
+//     console.log("adding goose");
+//     addGoose();
+//   }
+// });

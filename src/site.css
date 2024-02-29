@@ -3,8 +3,8 @@
   --clr-accent: black;
   --top-margin: 6rem;
 
-  /* --name-font: "Transport Medium"; */
-  --name-font: "sans serif";
+  --name-font: "Transport Medium";
+  /* --name-font: "sans serif"; */
   --name-font-weight: 400;
   /* --background: #6e9c78 ; */
   --background2: #86a1cc;
@@ -23,10 +23,10 @@
 * {
   /* overflow-x: hidden;  */
 }
-/* 
+
 @font-face {
   font-family: "Transport Medium";
-  src: url(./assets/TransportMedium.ttf) format("truetype");
+  src: url(../assets/TransportMedium.ttf) format("truetype");
 }
 
 @font-face {
@@ -37,7 +37,7 @@
 @font-face {
   font-family: "Expressway";
   src: url(../assets/expresswayrg.ttf) format("truetype");
-} */
+}
 
 #testimonials {
   margin-top: 200px;
