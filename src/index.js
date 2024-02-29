@@ -15,10 +15,11 @@ const wave = document.getElementById("wave");
 
 const start = "M 0 420 ";
 
+// const wavesPerScreen = Math.floor(window.innerWidth / 300);
 const wavesPerScreen = 6;
 const overflowFactor = 5;
 const numWaves = wavesPerScreen * overflowFactor;
-const totalWidth = window.innerWidth * overflowFactor;
+const totalWidth = Math.max(1500, window.innerWidth) * overflowFactor;
 const waveWidth = totalWidth / numWaves;
 const waveWidthVariance = 0.1 * waveWidth;
 let path = "";
@@ -152,14 +153,17 @@ console.log(triggerPoint);
 const addGoose = () => {
   const waveContainer = document.getElementById("wave-container");
 
-  const baseAnimationSpeed = 400; // pixels per second
+  const baseAnimationSpeed = 3000; // pixels per second
   const goose = document.createElement("img");
   goose.src = "../assets/goose.png";
   goose.classList.add("goose1");
   waveContainer.appendChild(goose); //#endregion
   // goose.style.top = triggerPoint + "px";
+
+  //TODO lets organise the animation trigger separately to its creation ?
+
   goose.style.top =
-    document.scrollingElement.scrollTop + window.innerHeight + "px";
+    document.scrollingElement.scrollTop + window.innerHeight * 1.1 + "px";
   // goose.style.animationDuration =
   //   window.innerWidth / baseAnimationSpeed + "s";
   goose.style.animationDuration = window.innerWidth / baseAnimationSpeed + "s";

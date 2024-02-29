@@ -4,7 +4,7 @@
   --wave-target-desktop: 60vh;
   --wave-target: var(--wave-target-desktop);
   --wave-top: calc(var(--wave-target) - (0.5 * var(--wave-height)));
-  --wave-bottom: calc(var(--wave-target) + (0.5 * var(--wave-height)));
+  --wave-bottom: calc(var(--wave-target) + (0.5 * var(--wave-height)) - 5px);
   --bottom-bg-height: calc(100% - var(--wave-bottom));
 
   --bg-green: #6e9c78 no-repeat 0 0/100vw 50vh;
@@ -24,8 +24,13 @@
 }
 
 .goose1 {
+  /* left: 50vw;
+  top: 50vh; */
+  /* left: 80%; */
+  left: calc(100% - 150px);
   /* left: calc(100% + 15px); */
-  left: 175vw;
+  /* left: calc(100% + 15px); */
+  /* left: 175vw; */
   position: absolute;
   z-index: 1;
   /* bottom: 60vh; */
@@ -33,13 +38,14 @@
   width: 40px;
 
   animation: move-goose1 0.5s linear forwards;
+  animation-delay: 0.2s;
 
   /* animation-range: 75% 100%; */
 }
 
 @keyframes move-wave {
   from {
-    transform: translate(-100vh, 0px);
+    transform: translate(25vh, 0px);
   }
   to {
     transform: translate(0px, 0px);
@@ -51,8 +57,8 @@
     transform: translate(0, 0);
   }
   to {
-    /* transform: translate(-600px, 180px); */
-    transform: translate(100vw, 30vw);
+    transform: translate(250px, -180px);
+    /* transform: translate(100vw, 30vw); */
   }
 }
 
@@ -62,14 +68,16 @@
   overflow: hidden;
   top: 0;
   left: 0;
-  height: calc(100% - var(--wave-top));
+  /* height: calc(100% - var(--wave-top)); */
   /* height: var(--wave-height); */
+  height: 100%;
 }
 
 #wave {
   position: absolute;
   width: 400vw;
-  left: -300px;
+  /* left: -600px; */
+  left: -200vw;
   height: var(--wave-height);
   top: var(--wave-top);
   margin-left: 0px;
