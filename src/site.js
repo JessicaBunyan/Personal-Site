@@ -1,11 +1,10 @@
-console.log("woo");
 console.log(document.getElementById("wave"));
 const needsPolyfill =
   getComputedStyle(document.getElementById("wave")).animationTimeline ===
   undefined;
 
 if (needsPolyfill) {
-  var script = document.createElement("script"); // create a script DOM node
+  var script = document.createElement("script");
   script.src =
     "https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js";
   document.head.appendChild(script);

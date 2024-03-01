@@ -1,27 +1,25 @@
 {
-  "name": "jessicabunyancom",
-  "version": "1.0.0",
-  "description": "Source files for my personal web page which you can find at TBC # TODO",
-  "main": "index.js",
-  "scripts": {
-    "dev": "",
-    "build": "npm run build-css && cp src/index.html dist/index.html ", 
-    "bundle-sass": "scss-bundle  -e src/index.scss -o src/bundle.scss",
-    "build-css": "npm run bundle-sass && npm run transpile-sass && rm src/bundle.scss",
-    "transpile-sass": "node-sass src/bundle.scss -o dist/index.css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jessicabunyan/Personal-Site.git"
-  },
-  "author": "Jessica Bunyan",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jessicabunyan/Personal-Site/issues"
-  },
-  "homepage": "https://github.com/jessicabunyan/Personal-Site#readme",
-  "dependencies": {
-    "node-sass": "^9.0.0",
-    "scss-bundle": "^3.1.2"
-  }
+	"name": "com.jessicabunyan",
+	"version": "1.0.0",
+	"description": "Source files for my personal web page which you can find at jessicabunyan.com",
+	"main": "index.js",
+	"scripts": {
+		"dev": "",
+		"build": "rm -r dist/* ; node build.mjs;"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jessicabunyan/Personal-Site.git"
+	},
+	"author": "Jessica Bunyan",
+	"bugs": {
+		"url": "https://github.com/jessicabunyan/Personal-Site/issues"
+	},
+	"homepage": "https://github.com/jessicabunyan/Personal-Site#readme",
+	"dependencies": {},
+	"devDependencies": {
+		"@chialab/esbuild-plugin-html": "^0.18.0",
+		"html-minifier": "^4.0.0",
+		"esbuild": "0.20.1"
+	}
 }

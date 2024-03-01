@@ -1,7 +1,7 @@
 :root {
   --clr-accent: black;
   --top-margin: 6rem;
-  --name-font: "Transport Medium" sans-serif;
+  --name-font: "Transport Medium", sans-serif;
   --name-font-weight: 400;
   --background2: #86a1cc;
 }
