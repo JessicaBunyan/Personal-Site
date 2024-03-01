@@ -164,3 +164,22 @@ window.addEventListener("keydown", (e) => {
     console.log(document.getElementById("wave").style);
   }
 });
+
+document.addEventListener("readystatechange", (event) => {
+  if (document.readyState === "complete") {
+    window.setTimeout(() => {
+      const entries = performance.getEntriesByType("navigation");
+      // const entries = performance.getEntries();
+      console.log("HTML+CSS load: " + +"ms");
+      const time = entries[0].domContentLoadedEventEnd;
+      Math.round();
+      const timeStr =
+        time > 1000 ? (time / 1000).toFixed(1) + "s" : Math.round(time) + "ms";
+      document.getElementById("content-load-time").innerText = timeStr;
+      console.log("full load (incl fonts etc): " + entries[0].loadEventEnd);
+
+      console.log(JSON.parse(JSON.stringify(entries[0])));
+      console.log(entries[0]);
+    }, 10);
+  }
+});
