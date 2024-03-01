@@ -51,8 +51,8 @@ const addGoose = () => {
     document.scrollingElement.scrollTop + window.innerHeight * 1.1 + "px";
   // goose.style.animationDuration =
   //   window.innerWidth / baseAnimationSpeed + "s";
-  goose.style.animationDuration = window.innerWidth / baseAnimationSpeed + "s";
-  console.log(goose.style.animationDuration);
+  // goose.style.animationDuration = window.innerWidth / baseAnimationSpeed + "s";
+  // console.log(goose.style.animationDuration);
 };
 
 const tick = () => {

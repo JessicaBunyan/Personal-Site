@@ -1,5 +1,5 @@
 :root {
-  --clr-accent: black;
+  --clr-accent: #1a2229;
   --top-margin: 6rem;
   --name-font: "Transport Medium", sans-serif;
   --name-font-weight: 400;
@@ -29,6 +29,10 @@
 @font-face {
   font-family: "Expressway";
   src: url(../assets/expresswayrg.ttf) format("truetype");
+}
+
+p {
+  margin-bottom: 1rem;
 }
 
 #testimonials {

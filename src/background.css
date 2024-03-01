@@ -65,13 +65,18 @@
 }
 
 .goose1 {
+  /* TODO undo */
+  display: none;
   left: calc(100% - 150px);
   position: absolute;
   z-index: 1;
   height: 40px;
   width: 40px;
   animation: move-goose1 0.5s linear forwards;
-  animation-delay: 0.2s;
+  animation-delay: 800s;
+}
+.goose1:hover {
+  animation-delay: 0s;
 }
 
 #wave-container {
