@@ -14,76 +14,9 @@ function rand(min, max) {
   // min and max included
   return Math.random() * (max - min + 1) + min;
 }
+
 let isGooseHidden = false;
 let canUnhideGoose = false;
-
-const wave = document.getElementById("wave");
-
-const wavesPerScreen = 6;
-const overflowFactor = 5;
-const numWaves = wavesPerScreen * overflowFactor;
-const totalWidth = Math.max(1500, window.innerWidth) * overflowFactor;
-const waveWidth = totalWidth / numWaves;
-const waveWidthVariance = 0.1 * waveWidth;
-let path = "";
-let penX = 0;
-let prevY = 420;
-const maxWavePeak = 50;
-const minWavePeak = 370;
-const minWaveHeight = 100;
-
-const points = [[0, 420]];
-
-for (let i = 0; i < numWaves; i++) {
-  const isUp = i % 2 === 0;
-  const thisWaveWidth = rand(
-    waveWidth - waveWidthVariance,
-    waveWidth + waveWidthVariance
-  );
-  const x = penX + thisWaveWidth;
-
-  let y = prevY;
-  y = rand(
-    isUp ? prevY + minWaveHeight : prevY - minWaveHeight,
-    isUp ? minWavePeak : maxWavePeak
-  );
-
-  points.push([x, y]);
-
-  penX = x;
-  prevY = y;
-}
-
-points.push([totalWidth, 420]);
-
-path = "M" + points[0][0] + "," + points[0][1];
-
-for (let i = 0; i < points.length - 1; i++) {
-  const xMid = (points[i][0] + points[i + 1][0]) / 2;
-  const yMid = (points[i][1] + points[i + 1][1]) / 2;
-  const cpX1 = (xMid + points[i][0]) / 2;
-  const cpX2 = (xMid + points[i + 1][0]) / 2;
-  path +=
-    "Q " +
-    cpX1 +
-    ", " +
-    points[i][1] +
-    ", " +
-    xMid +
-    ", " +
-    yMid +
-    (" Q " +
-      cpX2 +
-      ", " +
-      points[i + 1][1] +
-      ", " +
-      points[i + 1][0] +
-      ", " +
-      points[i + 1][1]);
-}
-
-const end = `L ${totalWidth} 420 Z`;
-wave.style.clipPath = `path("${path} ${end}")`;
 
 const throttle = (fn, delay) => {
   let time = Date.now();
@@ -136,7 +69,6 @@ const tick = () => {
       //   document.getElementsByClassName("goose1")[0].remove();
     }, 5000);
   }
-  //   positionWave();
   const isGooseJourneyComplete = false; // positionGoose();
   const goose = document.getElementById("goose1");
 
@@ -159,7 +91,7 @@ const tick = () => {
 window.addEventListener("keydown", (e) => {
   if (e.key == "g") {
     console.log("adding goose");
-    // addGoose();
+    addGoose();
     console.log(document.getElementById("wave").style.animationTimeline);
     console.log(document.getElementById("wave").style);
   }
